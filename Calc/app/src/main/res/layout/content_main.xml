@@ -25,6 +25,7 @@
         <TextView
             android:text=""
             android:textSize="30dp"
+            android:textSelectHandleRight="@color/colorButtonBack"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/textView"
@@ -39,10 +40,11 @@
         android:layout_marginBottom="2dp">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="178dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
             android:text="AC"
+            android:textSize="30dp"
             android:id="@+id/clearAll"
             android:background="@color/colorButtonBack"
             android:textColor="@color/colorButton"/>
@@ -52,16 +54,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
-            android:text="x"
-            android:id="@+id/delete"
-            android:background="@color/colorButtonBack"
-            android:textColor="@color/colorButton"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
             android:text="/"
+            android:textSize="30dp"
             android:id="@+id/divide"
             android:background="@color/colorButtonBack"
             android:textColor="@color/colorButton"/>
@@ -70,6 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="*"
+            android:textSize="30dp"
             android:id="@+id/multiplication"
             android:background="@color/colorButtonBack"
             android:textColor="@color/colorButton"/>
@@ -86,6 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
             android:text="1"
+            android:textSize="30dp"
             android:id="@+id/one"
             android:background="@color/colorButtonBack"
             android:textColor="@color/colorButton"/>
@@ -95,6 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
             android:text="2"
+            android:textSize="30dp"
             android:id="@+id/two"
             android:background="@color/colorButtonBack"
             android:textColor="@color/colorButton"/>
@@ -104,6 +101,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
             android:text="3"
+            android:textSize="30dp"
             android:id="@+id/three"
             android:background="@color/colorButtonBack"
             android:textColor="@color/colorButton"/>
@@ -112,6 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-"
+            android:textSize="30dp"
             android:id="@+id/substract"
             android:background="@color/colorButtonBack"
             android:textColor="@color/colorButton"/>
@@ -129,6 +128,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
             android:text="4"
+            android:textSize="30dp"
             android:id="@+id/four"
             android:background="@color/colorButtonBack"
             android:textColor="@color/colorButton"/>
@@ -137,6 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5"
+            android:textSize="30dp"
             android:layout_marginRight="2dp"
             android:id="@+id/five"
             android:background="@color/colorButtonBack"
@@ -146,6 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="6"
+            android:textSize="30dp"
             android:layout_marginRight="2dp"
             android:id="@+id/six"
             android:background="@color/colorButtonBack"
@@ -155,6 +157,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="+"
+            android:textSize="30dp"
             android:id="@+id/addition"
             android:background="@color/colorButtonBack"
             android:textColor="@color/colorButton"/>
@@ -172,6 +175,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="7"
+            android:textSize="30dp"
             android:layout_marginRight="2dp"
             android:id="@+id/seven"
             android:background="@color/colorButtonBack"
@@ -181,6 +185,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="8"
+            android:textSize="30dp"
             android:layout_marginRight="2dp"
             android:id="@+id/eight"
             android:background="@color/colorButtonBack"
@@ -190,6 +195,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="9"
+            android:textSize="30dp"
             android:layout_marginRight="2dp"
             android:id="@+id/nine"
             android:background="@color/colorButtonBack"
@@ -199,6 +205,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="%"
+            android:textSize="30dp"
             android:id="@+id/percentage"
             android:elevation="0dp"
             android:background="@color/colorButtonBack"
@@ -215,6 +222,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="."
+            android:textSize="30dp"
             android:layout_marginRight="2dp"
             android:id="@+id/dot"
             android:background="@color/colorButtonBack"
@@ -224,6 +232,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
+            android:textSize="30dp"
             android:layout_marginRight="2dp"
             android:id="@+id/zero"
             android:background="@color/colorButtonBack"
@@ -233,6 +242,7 @@
             android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:text="="
+            android:textSize="30dp"
             android:id="@+id/equal"
             android:background="@color/colorButtonBack"
             android:textColor="@color/colorButton"/>

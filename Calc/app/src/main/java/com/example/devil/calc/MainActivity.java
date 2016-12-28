@@ -55,8 +55,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mClickButtonNine.setOnClickListener(this);
         Button mClickButtonZero = (Button) findViewById(R.id.zero);
         mClickButtonZero.setOnClickListener(this);
-        Button mClickButtonDelete = (Button) findViewById(R.id.delete);
-        mClickButtonDelete.setOnClickListener(this);
         Button mClickButtonClose = (Button) findViewById(R.id.clearAll);
         mClickButtonClose.setOnClickListener(this);
         Button mClickButtonDot = (Button) findViewById(R.id.dot);
@@ -120,11 +118,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             }
 
-            case R.id.delete: {
-                TextView textView = (TextView) findViewById(R.id.textView);
-                textView.setText("");
-                break;
-            }
             case R.id.equal: {
                 TextView textView = (TextView) findViewById(R.id.textView);
                 final String str = textView.getText().toString();
