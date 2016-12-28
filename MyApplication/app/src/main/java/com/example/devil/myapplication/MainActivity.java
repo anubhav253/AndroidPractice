@@ -1,8 +1,11 @@
 package com.example.devil.myapplication;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -27,7 +31,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Devloped by Anubhav.", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -81,14 +85,19 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            Toast toast = Toast.makeText(this, "Camera Clicked", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0 ,0);
+            toast.show();
         } else if (id == R.id.nav_gallery) {
+            Toast.makeText(this, "Gallery Clicked",Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_slideshow) {
+
 
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
+            createAlertDialoque("Share", "Share has been clicked");
 
         } else if (id == R.id.nav_send) {
 
@@ -97,5 +106,31 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void createAlertDialoque(String title, String message){
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+        builder1.setTitle(title);
+        builder1.setMessage(message);
+        builder1.setCancelable(true);
+
+        builder1.setPositiveButton(
+                "Yes",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        builder1.setNegativeButton(
+                "No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        AlertDialog alert11 = builder1.create();
+        alert11.show();
     }
 }
