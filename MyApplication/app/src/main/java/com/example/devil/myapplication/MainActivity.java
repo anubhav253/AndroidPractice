@@ -2,6 +2,7 @@ package com.example.devil.myapplication;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -72,6 +73,8 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingActivity.class);
+            startActivity(intent);
             return true;
         }
 
@@ -100,6 +103,7 @@ public class MainActivity extends AppCompatActivity
             createAlertDialoque("Share", "Share has been clicked");
 
         } else if (id == R.id.nav_send) {
+            createAlertDialoque("Sending", "Send has been clicked");
 
         }
 
