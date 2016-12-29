@@ -4,7 +4,8 @@
     <color name="colorBackground">#00FFFF</color>
     <color name="colorButton">#FFFFFF</color>
     <color name="colorButtonBack">#000</color>
-    <color name="colorScreen">#999</color>
+    <color name="colorScreen"> #48c9b0</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorAC">#f4d03f</color>
 </resources>
