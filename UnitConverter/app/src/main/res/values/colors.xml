@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="navigationBg">#dc7633</color>
     <color name="menuText">#fdfefe</color>
+    <color name="buttonBg">#000000</color>
+    <color name="buttonText">#FFFF00</color>
 </resources>

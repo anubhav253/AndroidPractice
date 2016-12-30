@@ -9,13 +9,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
+
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txt_inp_speed"
             android:textAlignment="center"
+            android:inputType="number"
+            android:hint="Enter your value"
             android:textSize="30dp"
-            android:hint="Enter your value"/>
+            android:text="" />
 
 
     </LinearLayout>
@@ -45,10 +48,13 @@
         <Button
             android:layout_width="match_parent"
             android:text="Convert"
-            android:layout_height="50dp" />
+            android:layout_height="60dp"
+            android:textSize="25dp"
+            android:background="@color/buttonBg"
+            android:textColor="@color/buttonText"/>
+
 
 
     </LinearLayout>
-
 
 </LinearLayout>
