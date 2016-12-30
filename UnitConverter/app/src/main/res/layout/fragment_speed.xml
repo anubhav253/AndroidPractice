@@ -48,6 +48,7 @@
         <Button
             android:layout_width="match_parent"
             android:text="Convert"
+            android:id="@+id/btn_speed"
             android:layout_height="60dp"
             android:textSize="25dp"
             android:background="@color/buttonBg"
