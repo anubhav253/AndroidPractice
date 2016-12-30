@@ -19,7 +19,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
         android:gravity="center"
-        android:textColor="#fdfefe"
+        android:textColor="@color/menuText"
         android:textSize="30dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
