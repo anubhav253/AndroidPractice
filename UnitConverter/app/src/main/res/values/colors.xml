@@ -7,4 +7,5 @@
     <color name="menuText">#fdfefe</color>
     <color name="buttonBg">#000000</color>
     <color name="buttonText">#FFFF00</color>
+    <color name="fragmentBg">#85c1e9</color>
 </resources>
