@@ -21,6 +21,7 @@ import com.example.devil.unitconverter.R;
 import com.example.devil.unitconverter.fragment.LengthFragment;
 import com.example.devil.unitconverter.fragment.SpeedFragment;
 import com.example.devil.unitconverter.fragment.TemperatureFragment;
+import com.example.devil.unitconverter.fragment.TermsConditionsFrangment;
 import com.example.devil.unitconverter.fragment.WeightFragment;
 
 import java.util.ArrayList;
@@ -110,7 +111,10 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_terms) {
+            setTitle("Terms and Conditions");
+            Fragment fragment = new TermsConditionsFrangment();
+            fragmentManager.beginTransaction().replace(R.id.content_main, fragment).commitAllowingStateLoss();
             return true;
         }
 
