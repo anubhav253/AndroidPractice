@@ -19,6 +19,7 @@
             android:inputType="number"
             android:hint="Enter your value"
             android:layout_marginBottom="20dp"
+            android:maxLength="9"
             android:textSize="30dp"
             android:text="" />
 

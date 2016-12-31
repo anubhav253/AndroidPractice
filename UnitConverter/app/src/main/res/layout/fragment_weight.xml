@@ -18,6 +18,7 @@
             android:textAlignment="center"
             android:inputType="number"
             android:hint="Enter your value"
+            android:maxLength="9"
             android:textSize="30dp"
             android:text="" />
 

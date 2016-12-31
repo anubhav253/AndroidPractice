@@ -40,7 +40,7 @@ public class LengthFragment extends BaseFragment implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_length:
-                int km= Integer.parseInt( input.getText().toString() );
+                double km= Integer.parseInt( input.getText().toString() );
                 Double m = Double.valueOf(km * 1000);
                 output.setText(m.toString());
                 break;
