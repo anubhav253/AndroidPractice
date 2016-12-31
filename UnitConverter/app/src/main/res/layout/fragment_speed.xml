@@ -37,7 +37,7 @@
             android:id="@+id/txt_out_speed"
             android:textAlignment="center"
             android:textSize="30dp"
-            android:hint="You result"/>
+            android:hint="Your result"/>
 
 
     </LinearLayout>

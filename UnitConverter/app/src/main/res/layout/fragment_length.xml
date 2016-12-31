@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:paddingTop="50dp"
+    android:layout_height="match_parent"
+    android:background="@color/fragmentBg">
 
     <Spinner
         android:layout_width="match_parent"
@@ -9,28 +11,58 @@
         android:layout_marginBottom="10dp"
         android:id="@+id/spinner" />
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text=""
-        android:layout_marginBottom="10dp"
-        android:ems="10"
-        android:id="@+id/editText" />
+        android:orientation="vertical">
 
-    <TextView
-        android:text="TextView"
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_inp_length"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:hint="Enter your value"
+            android:layout_marginBottom="20dp"
+            android:textSize="30dp"
+            android:text="" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/textView" />
-
-
-    <Button
-        android:text="Convert"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_gravity="center"
         android:layout_height="wrap_content"
-        android:id="@+id/button" />
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_out_length"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:hint="Your result"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="Convert"
+            android:id="@+id/btn_length"
+            android:layout_height="60dp"
+            android:textSize="25dp"
+            android:background="@color/buttonBg"
+            android:textColor="@color/buttonText"/>
+
+
+    </LinearLayout>
+
 </LinearLayout>

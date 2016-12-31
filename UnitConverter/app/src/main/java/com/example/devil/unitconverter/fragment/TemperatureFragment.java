@@ -5,6 +5,9 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.devil.unitconverter.R;
 
@@ -12,16 +15,35 @@ import com.example.devil.unitconverter.R;
  * Created by DEVIL on 12/29/2016.
  */
 
-public class TemperatureFragment extends BaseFragment {
+public class TemperatureFragment extends BaseFragment implements View.OnClickListener{
 
     View view;
+    TextView output;
+    EditText input;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(R.layout.fragment_temperature, container, false);
+        view = inflater.inflate(R.layout.fragment_temperature, container, false);
+        Button b = (Button) view.findViewById(R.id.btn_temperature);
+        b.setOnClickListener(this);
+
+        output = (TextView) view.findViewById(R.id.txt_out_temperature);
+
+        input = (EditText) view.findViewById(R.id.txt_inp_temperature);
         return view;
 
     }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_temperature:
+                int celcius= Integer.parseInt( input.getText().toString() );
+                Double kelvin= celcius + 274.150;
+                output.setText(kelvin.toString());
+                break;
+        }
+    }
+
     }
