@@ -6,4 +6,5 @@
     <color name="colorMenuUp">#131313</color>
     <color name="colorMenuBottom">#800000</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorWeb">#fdfefe</color>
 </resources>
