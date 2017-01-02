@@ -53,27 +53,29 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 Snackbar.make(view, "Devloped by Anubhav.", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
 
+        b1=(Button)findViewById(R.id.button);
+        ed1=(EditText)findViewById(R.id.editText);
 
+        wv1=(WebView)findViewById(R.id.webView);
+        wv1.setWebViewClient(new MyBrowser());
 
-                b1=(Button)findViewById(R.id.button);
-                ed1=(EditText)findViewById(R.id.editText);
+        wv1.getSettings().setLoadsImagesAutomatically(true);
+        wv1.getSettings().setJavaScriptEnabled(true);
+        wv1.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        wv1.loadUrl("https://www.flipkart.com");
 
-                wv1=(WebView)findViewById(R.id.webView);
-                wv1.setWebViewClient(new MyBrowser());
-                wv1.loadUrl("www.flipkart.com");
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = ed1.getText().toString();
 
-                b1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        String url = ed1.getText().toString();
-
-                        wv1.getSettings().setLoadsImagesAutomatically(true);
-                        wv1.getSettings().setJavaScriptEnabled(true);
-                        wv1.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-                        wv1.loadUrl(url);
-                    }
-                });
+                wv1.getSettings().setLoadsImagesAutomatically(true);
+                wv1.getSettings().setJavaScriptEnabled(true);
+                wv1.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+                wv1.loadUrl(url);
             }
         });
 

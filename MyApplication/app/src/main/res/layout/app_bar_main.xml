@@ -34,14 +34,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
         android:orientation="vertical" >
-    <WebView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="100dp"
-        android:id="@+id/webView"
-        android:layout_below="@+id/button" />
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -56,6 +50,12 @@
             android:layout_height="wrap_content"
             android:text="Enter"
             android:id="@+id/button"/>
+
+        <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webView"
+        android:layout_below="@+id/button" />
     </LinearLayout>
 
 
