@@ -36,21 +36,28 @@
         android:layout_height="match_parent"
         android:layout_marginTop="60dp"
         android:orientation="vertical" >
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText"
-            android:hint="Enter Text"
-            android:textColorHighlight="#ff7eff"
-            android:textColor="#fdfefe"
-            android:textColorHint="#ffff25"
-            android:gravity="center"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Enter"
-            android:id="@+id/button"/>
+            android:orientation="horizontal">
 
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:hint="Enter Url"
+                android:textColorHighlight="#ff7eff"
+                android:textColor="#fdfefe"
+                android:textColorHint="#ffff25"
+                android:gravity="center"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter"
+                android:textSize="11.5dp"
+                android:id="@+id/button"/>
+
+        </LinearLayout>
         <WebView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
