@@ -25,6 +25,11 @@ public class SettingActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void listView(View view){
+        Intent intent = new Intent(this, ShowList.class);
+        startActivity(intent);
+    }
+
     public void notification(View view){
         addNotification();
     }
