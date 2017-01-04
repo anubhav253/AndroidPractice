@@ -59,6 +59,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setCompassEnabled(true);
         mMap.getUiSettings().setZoomControlsEnabled(true);
 
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+
+        mMap.getUiSettings().setRotateGesturesEnabled(true);
+
         LatLng sydney = new LatLng(0, 0);
         MarkerOptions marker = new MarkerOptions().position(sydney).title("0 , 0");
         marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
