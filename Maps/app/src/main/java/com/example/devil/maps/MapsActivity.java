@@ -49,15 +49,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(marker);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
+
+        LatLng mumbai = new LatLng(19.0760f, 72.8777f);
+        MarkerOptions marker2 = new MarkerOptions().position(mumbai).title("0 , 0");
+        marker2.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+        mMap.addMarker(marker2);
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(mumbai));
+
+
+        //For zoom on India
         LatLng india = new LatLng(12.9716f, 77.5946f);
         mMap.addMarker(new MarkerOptions().position(india).title("India"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(india));
-
         CameraPosition cameraPosition = new CameraPosition.Builder().target(
-                india).zoom(13.5f).build();
-
-        
-
+                india).zoom(10f).build();
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 }
