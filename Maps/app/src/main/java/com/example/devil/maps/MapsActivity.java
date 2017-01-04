@@ -51,11 +51,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         LatLng mumbai = new LatLng(19.0760f, 72.8777f);
-        MarkerOptions marker2 = new MarkerOptions().position(mumbai).title("0 , 0");
+        MarkerOptions marker2 = new MarkerOptions().position(mumbai).title("Mumbai");
         marker2.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
         mMap.addMarker(marker2);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(mumbai));
 
+
+        LatLng rajasthan = new LatLng(27.0238f, 74.2179f);
+        MarkerOptions marker3 = new MarkerOptions().position(rajasthan).title("Rajasthan");
+        marker3.icon(BitmapDescriptorFactory.fromResource(R.mipmap.restaurant));
+        mMap.addMarker(marker3);
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(rajasthan));
+
+
+        LatLng delhi = new LatLng(28.7041f, 77.1025f);
+        mMap.addMarker(new MarkerOptions().position(delhi).title("Delhi"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(delhi));
+        CameraPosition cameraPosition2 = new CameraPosition.Builder().target(
+                delhi).zoom(9f).build();
+        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition2));
 
         //For zoom on India
         LatLng india = new LatLng(12.9716f, 77.5946f);
@@ -64,5 +78,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         CameraPosition cameraPosition = new CameraPosition.Builder().target(
                 india).zoom(10f).build();
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+
+
+
     }
 }
