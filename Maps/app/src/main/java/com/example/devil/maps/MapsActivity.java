@@ -65,10 +65,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
             android.location.Address address = addressList.get(0);
             LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
-            mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+            CameraPosition cameraPosition = new CameraPosition.Builder().target(latLng).zoom(11f).build();
+            mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
             MarkerOptions mar = new MarkerOptions().position(latLng).title(location);
             mar.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
             mMap.addMarker(mar);
+
         }
     }
 
@@ -113,33 +115,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.getUiSettings().setIndoorLevelPickerEnabled(true);
 
-        LatLng sydney = new LatLng(0, 0);
-        MarkerOptions marker = new MarkerOptions().position(sydney).title("0 , 0");
-        marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
-        mMap.addMarker(marker);
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-
-
         LatLng mumbai = new LatLng(19.0760f, 72.8777f);
         MarkerOptions marker2 = new MarkerOptions().position(mumbai).title("Mumbai");
         marker2.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
         mMap.addMarker(marker2);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(mumbai));
 
-
-        LatLng rajasthan = new LatLng(27.0238f, 74.2179f);
-        MarkerOptions marker3 = new MarkerOptions().position(rajasthan).title("Rajasthan");
-        marker3.icon(BitmapDescriptorFactory.fromResource(R.mipmap.restaurant));
-        mMap.addMarker(marker3);
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(rajasthan));
-
-
-        LatLng delhi = new LatLng(28.7041f, 77.1025f);
-        mMap.addMarker(new MarkerOptions().position(delhi).title("Delhi"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(delhi));
-        CameraPosition cameraPosition2 = new CameraPosition.Builder().target(
-                delhi).zoom(9f).build();
-        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition2));
 
         //For zoom on India
         LatLng india = new LatLng(12.9716f, 77.5946f);
