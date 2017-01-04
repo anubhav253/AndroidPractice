@@ -65,8 +65,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
             android.location.Address address = addressList.get(0);
             LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
-            mMap.addMarker(new MarkerOptions().position(latLng).title("Marker"));
             mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+            MarkerOptions mar = new MarkerOptions().position(latLng).title(location);
+            mar.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+            mMap.addMarker(mar);
         }
     }
 
