@@ -110,6 +110,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.getUiSettings().setRotateGesturesEnabled(true);
 
+
+        mMap.getUiSettings().setIndoorLevelPickerEnabled(true);
+
         LatLng sydney = new LatLng(0, 0);
         MarkerOptions marker = new MarkerOptions().position(sydney).title("0 , 0");
         marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
@@ -140,7 +143,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //For zoom on India
         LatLng india = new LatLng(12.9716f, 77.5946f);
-        mMap.addMarker(new MarkerOptions().position(india).title("India"));
+        mMap.addMarker(new MarkerOptions().position(india).title("Banglore"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(india));
         CameraPosition cameraPosition = new CameraPosition.Builder().target(
                 india).zoom(10f).build();
