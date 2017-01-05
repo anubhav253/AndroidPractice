@@ -35,7 +35,7 @@
             android:id="@+id/txt_out_length"
             android:textAlignment="center"
             android:textSize="30dp"
-            android:hint="Your result"/>
+            android:hint="Your result in metre"/>
 
         <Button
             android:layout_marginTop="50dp"

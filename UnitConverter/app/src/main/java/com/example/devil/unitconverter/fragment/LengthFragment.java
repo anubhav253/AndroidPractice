@@ -58,7 +58,7 @@ public class LengthFragment extends BaseFragment implements View.OnClickListener
 
 
                 final Toast toast = Toast.makeText(getActivity(), "Spinner " + spinner.getSelectedItem().toString(), Toast.LENGTH_LONG);
-                if (spinner.getSelectedItem().toString()=="Kilometer"){
+                if (spinner.getSelectedItem().toString()=="Kilometre"){
                     double km= Integer.parseInt( input.getText().toString() );
                     Double m = Double.valueOf(km * 1000);
                     output.setText(m.toString());
@@ -83,12 +83,12 @@ public class LengthFragment extends BaseFragment implements View.OnClickListener
                     Double m = Double.valueOf(inch * 0.0254);
                     output.setText(m.toString());
                 }
-                else if (spinner.getSelectedItem().toString()=="Centimeter"){
+                else if (spinner.getSelectedItem().toString()=="Centimetre"){
                     double cm= Integer.parseInt( input.getText().toString() );
                     Double m = Double.valueOf(cm * 0.01);
                     output.setText(m.toString());
                 }
-                else if (spinner.getSelectedItem().toString()=="Milimeter"){
+                else if (spinner.getSelectedItem().toString()=="Milimetre"){
                     double mm= Integer.parseInt( input.getText().toString() );
                     Double m = Double.valueOf(mm * 0.001);
                     output.setText(m.toString());
@@ -100,14 +100,13 @@ public class LengthFragment extends BaseFragment implements View.OnClickListener
 
     public void initSpinner(View view){
         List<String> categories = new ArrayList<String>();
-        categories.add("Select your choice");
-        categories.add("Kilometer");
+        categories.add("Kilometre");
         categories.add("Mile");
         categories.add("Yard");
         categories.add("Foot");
         categories.add("Inch");
-        categories.add("Centimeter");
-        categories.add("Milimeter");
+        categories.add("Centimetre");
+        categories.add("Milimetre");
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, categories);
 
