@@ -23,14 +23,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/text3"
-        android:text="Kilometer changed into metre."
+        android:text="In length conversion input is in metre."
         android:layout_marginTop="20dp"
         android:textSize="25dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/text4"
-        android:text="Kilogram is converted into gram."
+        android:text="In mass conversion input is in kilogram."
         android:layout_marginTop="20dp"
         android:textSize="25dp"/>
     <TextView
