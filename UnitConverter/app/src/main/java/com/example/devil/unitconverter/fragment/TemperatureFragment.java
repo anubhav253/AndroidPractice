@@ -5,11 +5,17 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.devil.unitconverter.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by DEVIL on 12/29/2016.
@@ -20,6 +26,7 @@ public class TemperatureFragment extends BaseFragment implements View.OnClickLis
     View view;
     TextView output;
     EditText input;
+    Spinner spinner;
 
     @Nullable
     @Override
@@ -32,6 +39,10 @@ public class TemperatureFragment extends BaseFragment implements View.OnClickLis
         output = (TextView) view.findViewById(R.id.txt_out_temperature);
 
         input = (EditText) view.findViewById(R.id.txt_inp_temperature);
+
+        spinner = (Spinner) view.findViewById(R.id.spin_temperature);
+        //spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+        initSpinner(view);
         return view;
 
     }
@@ -39,11 +50,34 @@ public class TemperatureFragment extends BaseFragment implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_temperature:
-                int celcius= Integer.parseInt( input.getText().toString() );
-                Double kelvin= celcius + 274.150;
-                output.setText(kelvin.toString());
+                final Toast toast = Toast.makeText(getActivity(), "Spinner " + spinner.getSelectedItem().toString(), Toast.LENGTH_LONG);
+                if (spinner.getSelectedItem().toString()=="Celcius"){
+                    double K= Integer.parseInt( input.getText().toString() );
+                    Double C = Double.valueOf(K + 273.15);
+                    output.setText(C.toString());
+                }
+                else if (spinner.getSelectedItem().toString()=="Farenheit"){
+                    double K= Integer.parseInt( input.getText().toString() );
+                    Double F = Double.valueOf(K + 255.372);
+                    output.setText(F.toString());
+                }
+                toast.show();
                 break;
         }
     }
 
+    public void initSpinner(View view){
+        List<String> categories = new ArrayList<String>();
+        categories.add("Celcius");
+        categories.add("Farenheit");
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, categories);
+
+
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //dataAdapter.setDropDownViewTheme(Resources.Theme.class);
+
+        spinner.setAdapter(dataAdapter);
+
     }
+}
