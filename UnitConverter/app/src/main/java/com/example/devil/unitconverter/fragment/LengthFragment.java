@@ -59,39 +59,39 @@ public class LengthFragment extends BaseFragment implements View.OnClickListener
 
                 final Toast toast = Toast.makeText(getActivity(), "Spinner " + spinner.getSelectedItem().toString(), Toast.LENGTH_LONG);
                 if (spinner.getSelectedItem().toString()=="Kilometre"){
-                    double km= Integer.parseInt( input.getText().toString() );
-                    Double m = Double.valueOf(km * 1000);
-                    output.setText(m.toString());
+                    double m= Integer.parseInt( input.getText().toString() );
+                    Double km = Double.valueOf(m / 1000);
+                    output.setText(km.toString());
                 }
                 else if (spinner.getSelectedItem().toString()=="Mile"){
-                    double mile= Integer.parseInt( input.getText().toString() );
-                    Double m = Double.valueOf(mile * 1609.34);
-                    output.setText(m.toString());
+                    double m= Integer.parseInt( input.getText().toString() );
+                    Double mile = Double.valueOf(m * 1609.34);
+                    output.setText(mile.toString());
                 }
                 else if (spinner.getSelectedItem().toString()=="Yard"){
-                    double Yard= Integer.parseInt( input.getText().toString() );
-                    Double m = Double.valueOf(Yard * 0.9144);
-                    output.setText(m.toString());
+                    double m = Integer.parseInt( input.getText().toString() );
+                    Double Yard = Double.valueOf(m * 0.9144);
+                    output.setText(Yard.toString());
                 }
                 else if (spinner.getSelectedItem().toString()=="Foot"){
-                    double foot= Integer.parseInt( input.getText().toString() );
-                    Double m = Double.valueOf(foot * 0.3048);
-                    output.setText(m.toString());
+                    double m= Integer.parseInt( input.getText().toString() );
+                    Double foot = Double.valueOf(m * 0.3048);
+                    output.setText(foot.toString());
                 }
                 else if (spinner.getSelectedItem().toString()=="Inch"){
-                    double inch= Integer.parseInt( input.getText().toString() );
-                    Double m = Double.valueOf(inch * 0.0254);
-                    output.setText(m.toString());
+                    double m= Integer.parseInt( input.getText().toString() );
+                    Double inch = Double.valueOf(m * 0.0254);
+                    output.setText(inch.toString());
                 }
                 else if (spinner.getSelectedItem().toString()=="Centimetre"){
-                    double cm= Integer.parseInt( input.getText().toString() );
-                    Double m = Double.valueOf(cm * 0.01);
-                    output.setText(m.toString());
+                    double m= Integer.parseInt( input.getText().toString() );
+                    Double cm = Double.valueOf(m * 0.01);
+                    output.setText(cm.toString());
                 }
                 else if (spinner.getSelectedItem().toString()=="Milimetre"){
-                    double mm= Integer.parseInt( input.getText().toString() );
-                    Double m = Double.valueOf(mm * 0.001);
-                    output.setText(m.toString());
+                    double m= Integer.parseInt( input.getText().toString() );
+                    Double mm = Double.valueOf(m * 0.001);
+                    output.setText(mm.toString());
                 }
                 toast.show();
                 break;
