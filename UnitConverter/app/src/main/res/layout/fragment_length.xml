@@ -45,7 +45,7 @@
             android:layout_height="60dp"
             android:textSize="25dp"
             android:background="@color/buttonBg"
-            android:textColor="@color/buttonText"/>
+            android:textColor="@color/buttonText" />
 
     </LinearLayout>
 
